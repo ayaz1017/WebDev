@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Hrs Fitness</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking to external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+
+    <style>
+        /* Background styling */
+        body {
+            background-image: url(gym.jpg); /* Adding background image */
+            background-size: cover; /* Make the image cover the entire page */
+            background-position: center; /* Center the background */
+            background-attachment: fixed; /* Keep the image fixed when scrolling */
+            color: white; /* Default text color to ensure readability */
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 100px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Button styling to match background */
+        button {
+            background-color: #4CAF50; /* Green button that blends with the gym background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+
+        /* Input fields styling */
+        .input-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .input-icon i {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            min-width: 40px;
+            text-align: center;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .input-icon input {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 600px) {
+            .menu-icon {
+                display: block;
+            }
+            .nav-bar ul {
+                display: none;
+            }
+            .nav-bar.active ul {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="18hrs.jpg" alt="18 Hrs Fitness Logo" /> <!-- Logo image -->
+        <h1>18 Hrs Fitness</h1> <!-- Gym name -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+    </div>
+
+    <div class="content-wrapper">
+        <div class="nav-bar">
+            <ul class="menu">
+                <li><a onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a onclick="showSection('customer')">Customer Registration</a></li>
+                <li><a onclick="showSection('login')">Login</a></li>
+                <li><a onclick="showSection('trainer')">Trainer Registration</a></li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content active animated">
+            <h2>Welcome to 18 Hrs Fitness</h2>
+            <p>Use the menu to navigate through different sections of the system.</p>
+            <p>Manage customer registrations, trainer registrations, and more.</p>
+        </div>
+
+        <!-- Customer Registration Section -->
+        <div id="customer" class="content animated">
+            <h2>Customer Registration</h2>
+            <form id="customerForm">
+                <label for="custName">Name:</label>
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="custName" name="custName" required>
+                </div>
+
+                <label for="custAge">Age:</label>
+                <div class="input-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="number" id="custAge" name="custAge" required>
+                </div>
+
+                <label for="custPhone">Phone Number:</label>
+                <div class="input-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="custPhone" name="custPhone" required>
+                </div>
+
+                <label for="custEmail">Email:</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="custEmail" name="custEmail" required>
+                </div>
+
+                <button type="submit">Register Customer</button>
+            </form>
+        </div>
+
+        <!-- Login Section -->
+        <div id="login" class="content animated">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+
+                <label for="loginPassword">Password:</label>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Trainer Registration Section -->
+        <div id="trainer" class="content animated">
+            <h2>Trainer Registration</h2>
+            <form id="trainerForm">
+                <label for="trainerName">Name:</label>
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="trainerName" name="trainerName" required>
+                </div>
+
+                <label for="trainerAge">Age:</label>
+                <div class="input-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="number" id="trainerAge" name="trainerAge" required>
+                </div>
+
+                <label for="trainerPhone">Phone Number:</label>
+                <div class="input-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="trainerPhone" name="trainerPhone" required>
+                </div>
+
+                <label for="trainerEmail">Email:</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="trainerEmail" name="trainerEmail" required>
+                </div>
+
+                <button type="submit">Register Trainer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Linking to external JS file -->
+</body>
+</html>
+
+
+
+
+

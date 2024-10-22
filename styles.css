@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url('gym.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  overflow-x: hidden;
+  cursor:pointer;
+}
+
+/* Header Section */
+.header {
+  position: relative;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+  padding: 20px;
+  text-align: center;
+}
+
+.header img {
+  height: 80px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #4CAF50;
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navbar Styles */
+.nav-bar {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-bar ul li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: rgba(76, 175, 80, 0.2);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  background-color: #4CAF50;
+}
+
+/* Section Styling */
+.content-wrapper {
+  padding: 60px 20px;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+  color: #4CAF50;
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+p {
+  color: #ddd;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.input-icon i {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.input-icon input {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  color: #ccc;
+}
+
+.footer i {
+  color: #4CAF50;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .nav-bar ul li {
+      display: block;
+      margin: 10px 0;
+  }
+}
+.content-wrapper p{
+  font: size 20px;;
+}

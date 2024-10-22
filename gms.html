@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 Hrs Fitness</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"> <!-- Google Font -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <img src="18hrs.jpg" alt="18 Hrs Fitness Logo" /> <!-- Logo image -->
+        <h1>18 Hrs Fitness</h1> <!-- Gym name -->
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="nav-bar">
+        <ul class="menu">
+            <li><a onclick="showSection('dashboard')">Dashboard</a></li>
+            <li><a onclick="showSection('customer')">Customer Registration</a></li>
+            <li><a onclick="showSection('login')">Login</a></li>
+            <li><a onclick="showSection('personalTraining')">Personal Training</a></li>
+            <li><a onclick="showSection('contact')">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-wrapper">
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="content active">
+            <h2>Welcome to 18 Hrs Fitness</h2>
+            <p>#SAFE SWEAT SAVE</p>
+        </div>
+
+        <!-- Customer Registration Section -->
+        <div id="customer" class="content">
+            <h2>Customer Registration</h2>
+            <form id="customerForm">
+                <label for="custName">Name:</label>
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="custName" name="custName" required>
+                </div>
+
+                <label for="custAge">Age:</label>
+                <div class="input-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="number" id="custAge" name="custAge" required>
+                </div>
+
+                <label for="custPhone">Phone Number:</label>
+                <div class="input-icon">
+                    <i class="fas fa-phone"></i>
+                    <input type="text" id="custPhone" name="custPhone" required>
+                </div>
+
+                <label for="custEmail">Email:</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="custEmail" name="custEmail" required>
+                </div>
+
+                <button type="submit">Register Customer</button>
+            </form>
+        </div>
+
+        <!-- Login Section -->
+        <div id="login" class="content">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                </div>
+
+                <label for="loginPassword">Password:</label>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Personal Training Section -->
+                 <!-- Personal Training Section -->
+        <div id="personalTraining" class="content">
+            <h2>Personal Training</h2>
+            <p>Experience the Best Personal Training in Mumbai at 18 Hrs Fitness Gym</p>
+            <p>Ride the Wave to a Fitter, Healthier You</p>
+            <p>Your fitness journey is unique, and so should be your training. At 18 Hrs Fitness, located in the heart of Andheri West, our internationally certified personal trainers craft customized workout plans tailored just for you.</p>
+            <p>With over 20 years of experience in fitness transformation, we accelerate your fitness and weight loss goals through an expert blend of cardio, strength training, and the latest in state-of-the-art fitness technology.</p>
+            <button onclick="showSection('contact')">Get in Touch</button>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div id="contact" class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further assistance, feel free to reach out to us:</p>
+            <ul>
+                <li><i class="fas fa-phone"></i> Phone: +123-456-7890</li>
+                <li><i class="fas fa-envelope"></i> Email: contact@18hrsfitness.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Address: 123 Fitness Street, Health City</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>Follow us on social media for updates and promotions:</p>
+        <p>
+            <a href="#" style="color:white;"><i class="fab fa-facebook-f"></i> Facebook</a> |
+            <a href="#" style="color:white;"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="#" style="color:white;"><i class="fab fa-twitter"></i> Twitter</a>
+        </p>
+        <p>&copy; 2024 18 Hrs Fitness. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
